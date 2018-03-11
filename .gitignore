@@ -1,0 +1,5 @@
+*.zlylist*
+*.dat
+*.data
+*.shot
+tempbatch*.bat
