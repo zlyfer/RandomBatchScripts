@@ -4,7 +4,7 @@ REM Coding: Charset: Arabic: OEM 720.
 setlocal enabledelayedexpansion
 mode con cols=120
 REM PERSONAL START
-cd "C:\Users\zlyfer\Documents\Batchscripts"
+cd "C:\Users\zlyfla\Documents\GitHub\RandomBatchScripts"
 REM PERSONAL END
 md ToDoList.data 2>nul
 cd ToDoList.data

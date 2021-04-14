@@ -11,22 +11,22 @@ goto re1
 )
 if %width1% GTR 230 (
 cls
-echo Width must be below 230.
+echo Width must be 230 or below.
 goto re1
 )
 :re2
 set /P freak=Freakmode: 
-if %freak% LSS -1 (
+if %freak% LSS 0 (
 cls
-echo Freakmode must be at least -1.
+echo Freakmode must be at least 0.
 goto re2
 )
 if %freak% GTR 25 (
 cls
-echo Freakmode must be below 25.
+echo Freakmode must be 25 or below.
 goto re2
 )
-if %freak%==-1 set freak_=1 & set freak=0
+if %freak%==0 set freak_=1 & set freak=1
 mode con cols=%width1% lines=80
 set /A width2=%width1%-5
 set mm=0
@@ -80,32 +80,31 @@ if %freak_%==1 (
 set freak=%random:~0,2%
 if %freak% GTR 25 goto re3
 )
-if %freak%==0 echo !line%place%!^| ^|
-if %freak%==1 echo !line%place%!^| ^|!line%place%!^| ^|
-if %freak%==2 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==3 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==4 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==5 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==6 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==7 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==8 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==9 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==10 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==11 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==12 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==13 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==14 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==15 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==16 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==17 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==18 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==19 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==20 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==21 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==22 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==23 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==24 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
-if %freak%==25 echo !line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|!line%place%!^| ^|
+if %freak%==1 echo !line%place%!##
+if %freak%==2 echo !line%place%!##!line%place%!##
+if %freak%==3 echo !line%place%!##!line%place%!##!line%place%!##
+if %freak%==4 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==5 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==6 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==7 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==8 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==9 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==10 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==11 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==12 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==13 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==14 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==15 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==16 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==17 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==18 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==19 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==20 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==21 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==22 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==23 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==24 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
+if %freak%==25 echo !line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##!line%place%!##
 goto loop1
 :initializing
 echo init..
